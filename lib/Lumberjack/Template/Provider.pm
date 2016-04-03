@@ -1,6 +1,6 @@
 use v6.c;
 
-class Template6::Provider::File {
+class Lumberjack::Template::Provider {
 
     has @.include-path;
     has %.templates;
@@ -18,19 +18,25 @@ class Template6::Provider::File {
     }
 
     method fetch ($name) {
+        say "checking $name";
         my Str $template;
-        if %.templates{$name} :exists {
+        if %.templates{$name}:exists {
+            say "got cached";
             $template =  %.templates{$name};
         }
         else {
+            say "going to look in paths  : ", @!include-path.perl;
             for @!include-path -> $path {
                 my $file = "$path/$name" ~ ($name.ends-with($.ext) ?? '' !! $.ext);
-                if %?RESOURCES{$file}:exists {
+                say "checking for $file";
+                if %?RESOURCES{$file}.e {
                     $template = %?RESOURCES{$file}.slurp;
                     %.templates{$name} = $template;
+                    last;
                 }
             }
         }
+        return $template;
     }
 
     method store ($name, $template) {
