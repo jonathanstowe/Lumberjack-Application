@@ -9,41 +9,42 @@
 </head>
 <body>
     <div class="container">
-        <header><h1>WS</h1></header>
-        <section class="row">
-            <form id="form">
-                <input type="text" name="message" id="message">
-                <input type="submit">
-            </form>
-            <pre id="log"></pre>
-        </section>
+        <header><h1>Logs</h1></header>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Time</th>
+						<th>Level</th>
+						<th>Class</th>
+						<th>Method</th>
+						<th>Message</th>
+					</tr>
+				</thead>
+				<tbody id="detail">
+				</tbody>
+			</table>
         <footer>Powered by <a href="http://perl6.org/">Perl6</a></footer>
     </div>
     <script type="text/javascript">
         function log(msg) {
-            $('#log').text($('#log').text() + msg + "\n");
+				var row = '<tr><td>' + msg.when + '</td><td>' + msg.level + '</td><td>' + msg.class.name + '</td><td></td><td>' + msg.message + '</td></tr>';
+            $('#detail').prepend(row);
         }
 
         $(function () {
             var ws = new WebSocket('[% ws-url %]');
             ws.onopen = function () {
-                log('connected');
+                console.log('connected');
             };
             ws.onclose = function (ev) {
-                log('closed');
+                console.log('closed');
             };
             ws.onmessage = function (ev) {
-                log('received: ' + ev.data);
-                $('#message').val('');
+                log(JSON.parse(ev.data));
             };
             ws.onerror = function (ev) {
                 console.log(ev);
-                log('error: ' + ev.data);
             };
-            $('#form').submit(function () {
-                ws.send($('#message').val());
-                return false;
-            });
         });
     </script>
 </body>
