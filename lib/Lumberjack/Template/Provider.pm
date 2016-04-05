@@ -18,17 +18,13 @@ class Lumberjack::Template::Provider {
     }
 
     method fetch ($name) {
-        say "checking $name";
         my Str $template;
         if %.templates{$name}:exists {
-            say "got cached";
             $template =  %.templates{$name};
         }
         else {
-            say "going to look in paths  : ", @!include-path.perl;
             for @!include-path -> $path {
                 my $file = "$path/$name" ~ ($name.ends-with($.ext) ?? '' !! $.ext);
-                say "checking for $file";
                 if %?RESOURCES{$file}.e {
                     $template = %?RESOURCES{$file}.slurp;
                     %.templates{$name} = $template;

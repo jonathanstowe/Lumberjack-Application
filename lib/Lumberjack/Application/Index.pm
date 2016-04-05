@@ -16,7 +16,6 @@ class Lumberjack::Application::Index does Callable {
     }
 
     method call(%env) {
-        say %env;
         my $html = $!template.process('index', ws-url => $!ws-url);
         return 200, [Content-Type => 'text/html'], [$html];
     }
