@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header><h1>Logs</h1></header>
-			<table class="table">
+			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>Time</th>
@@ -26,8 +26,19 @@
         <footer>Powered by <a href="http://perl6.org/">Perl6</a></footer>
     </div>
     <script type="text/javascript">
+        var levels = [ 
+					{ "name" : "Off" }, 
+					{ "name" : "Fatal" }, 
+					{ "name" : "Error" }, 
+					{ "name" : "Warn" }, 
+					{ "name" : "Info" }, 
+					{ "name" : "Debug" }, 
+					{ "name" : "Trace" }, 
+					{ "name" :  "All" } 
+			];
+
         function log(msg) {
-				var row = '<tr><td>' + msg.when + '</td><td>' + msg.level + '</td><td>' + msg.class.name + '</td><td></td><td>' + msg.message + '</td></tr>';
+				var row = '<tr class="info"><td>' + msg.when + '</td><td>' + levels[msg.level].name + '</td><td>' + msg.class.name + '</td><td></td><td>' + msg.message + '</td></tr>';
             $('#detail').prepend(row);
         }
 
