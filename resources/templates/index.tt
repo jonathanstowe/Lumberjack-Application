@@ -67,7 +67,8 @@
             ];
     var LJ = angular.module('Lumberjack', [ 'angular-websocket' ]);
     LJ.factory('Logs', function($websocket) {
-      var dataStream = $websocket('[% ws-url %]');
+      var wsurl = 'ws://' + window.location.host + '/[% ws-url %]';
+      var dataStream = $websocket(wsurl);
 
       var entries = [];
 
