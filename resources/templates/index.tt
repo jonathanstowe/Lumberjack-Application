@@ -73,20 +73,20 @@
 
       dataStream.onMessage(function(message) {
           var entry = JSON.parse(message.data);
-        var m = entry.backtrace[4].subname;
+          var m = entry.backtrace[4].subname;
           var msg = {
-            when    :  new Date(entry.when),
-            level   :  levels[entry.level].name,
-            "class" :  entry.class.name,
-            method  :  m,
-            message :  entry.message
-        };
+              when    :  new Date(entry.when),
+              level   :  levels[entry.level].name,
+              "class" :  entry.class.name,
+              method  :  m,
+              message :  entry.message
+          };
 
-        if (entries.length >= 20) {
-            entries.pop;
-        }
+          if (entries.length >= 20) {
+              entries.pop();
+          }
         
-        entries.unshift(msg);
+          entries.unshift(msg);
       });
 
       var methods = {
