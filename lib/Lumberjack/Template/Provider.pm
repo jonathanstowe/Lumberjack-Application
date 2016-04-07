@@ -1,21 +1,8 @@
 use v6.c;
 
-class Lumberjack::Template::Provider {
+use Template6::Provider;
 
-    has @.include-path;
-    has %.templates;
-    has $.ext is rw = '.tt';
-
-
-    submethod BUILD (:@path, *%args) {
-        if @path {
-            @!include-path.splice(@!include-path.elems, 0, @path);
-        }
-    }
-
-    method add-path ($path) {
-        @.include-path.append: $path;
-    }
+class Lumberjack::Template::Provider does Template6::Provider {
 
     method fetch ($name) {
         my Str $template;
@@ -33,10 +20,6 @@ class Lumberjack::Template::Provider {
             }
         }
         return $template;
-    }
-
-    method store ($name, $template) {
-        %.templates{$name} = $template;
     }
 }
 
