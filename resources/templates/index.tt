@@ -44,10 +44,10 @@
             </thead>
             <tbody id="detail">
                 <tr ng-repeat="msg in Logs.entries track by $index" class="{{ msg.level }}">
-                  <td>{{ msg.when.toLocaleString() }}</td>
-                  <td>{{ msg.level }}</td>
-                  <td>{{ msg.class }}</td>
-                  <td>{{ msg.method }}</td>
+                  <td style="white-space: nowrap">{{ msg.when.toLocaleString() }}</td>
+                  <td style="white-space: nowrap">{{ msg.level }}</td>
+                  <td style="white-space: nowrap">{{ msg.class }}</td>
+                  <td style="white-space: nowrap">{{ msg.method }}</td>
                   <td>{{ msg.message }}</td>
                </tr>
             </tbody>
