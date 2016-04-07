@@ -13,6 +13,7 @@ class Lumberjack::Dispatcher::Proxy does Lumberjack::Dispatcher {
     has Str                 $.username;
     has Str                 $.password;
     has Str                 $.url       is required;
+    has Bool                $.quiet = False;
 
     method log(Lumberjack::Message $message) {
         if not $!ua.defined {
@@ -27,10 +28,17 @@ class Lumberjack::Dispatcher::Proxy does Lumberjack::Dispatcher {
 
         my $req = POST($!url, content => $message.to-json, Content-Type => "application/json");
 
-        my $res = $!ua.request($req);
+        my $res = try $!ua.request($req);
 
-        if not $res.is-success {
-            $*ERR.say: "proxy-dispatch failed : ", $res.status-line;
+        if not $!quiet {
+            if not $res.defined {
+                # This is likely to be because the
+                # server went away beneath us
+                $*ERR.say: "proxy-dispatch failed";
+            }
+            elsif not $res.is-success {
+                $*ERR.say: "proxy-dispatch failed : ", $res.status-line;
+            }
         }
     }
 
