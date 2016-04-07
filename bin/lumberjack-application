@@ -1,0 +1,16 @@
+#!perl6
+
+use Lumberjack;
+use Lumberjack::Application;
+
+multi sub MAIN(Int :$port = 8898, Bool :$console = False) {
+
+    if $console {
+        Lumberjack.dispatchers.append: Lumberjack::Dispatcher::Console.new(:colour);
+    }
+
+    my $application = Lumberjack::Application.new(:$port);
+    $application.run;
+}
+
+# vim: expandtab shiftwidth=4 ft=perl6
