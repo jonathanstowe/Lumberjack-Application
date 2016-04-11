@@ -4,7 +4,9 @@
    "version" : "0.0.1",
    "source-url" : "git@github.com:jonathanstowe/Lumberjack-Application.git",
    "tags" : ["logging", "lumberjack", "websocket", "p6sgi" ],
-   "test-depends" : [],
+   "test-depends" : [
+		"Test::Util::ServerPort"
+   ],
    "depends" : [
 		"Lumberjack",
       "HTTP::UserAgent",
