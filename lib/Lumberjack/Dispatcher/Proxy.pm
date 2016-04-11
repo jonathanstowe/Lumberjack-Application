@@ -1,5 +1,50 @@
 use v6.c;
 
+=begin pod
+
+=head1 NAME
+
+Lumberjack::Dispatcher::Proxy - dispatch lumberjack messages to a web server
+
+=head1 SYNOPSIS
+
+=begin code
+
+use Lumberjack;
+use Lumberjack::Dispatcher::Proxy;
+
+Lumberjack.dispatchers.append: Lumberjack::Dispatcher::Proxy.new(url => 'http://localhost:8898/log');
+
+# Now all messages will be dispatched to the web endpoint as well as the other dispatchers
+
+=end code
+
+=head1 DESCRIPTION
+
+This implements a C<Lumberjack::Dispatcher> that will POST the messages
+serialised as JSON to the specified URL.  Typically the endpoint
+will be provided by a C<Lumberjack::Application::PSGI> application
+which knows how to deserialise and re-dispatch the messages, but you
+can equally provide your own if you have different requirements.
+
+=head1 METHODS
+
+=head2 method new
+
+    method new(:$url!, :$username, :$password)
+
+As well as the C<classes> and C<levels> matchers provided for
+by the C<Lumberjack::Dispatcher> role, this has a required
+C<url> parameter that should be the URI of a web service that
+will accept an 'application/json' POST of the message data.
+Additionally if the C<username> and C<password> parameters
+are provided, it will attempt to authenticate with the HTTP
+server, currently only basic authentication is provided,  though
+other mechanisms may become available in the future.
+
+
+=end pod
+
 use Lumberjack:ver<0.0.3>;
 use Lumberjack::Message::JSON;
 
@@ -41,8 +86,5 @@ class Lumberjack::Dispatcher::Proxy does Lumberjack::Dispatcher {
             }
         }
     }
-
-
-
 }
 # vim: expandtab shiftwidth=4 ft=perl6

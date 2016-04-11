@@ -25,6 +25,39 @@ Meanwhile in some other application:
 	# at a Websocket application that you can point your browser at.
 
 ```
+Or you can arrange components as you see fit:
+```perl6
+
+# This is almost  identical to what Lumberjack::Application does
+use Lumberjack;
+use Lumberjack::Dispatcher::Supply;
+use Lumberjack::Application::PSGI;
+use Lumberjack::Application::WebSocket;
+use Lumberjack::Application::Index;
+
+use Crust::Builder;
+
+# The supply dispatcher is used to transfer the messages
+# between the lumberjack dispatch mechanism and the
+# connected websocket clients.
+my $supply  = Lumberjack::Dispatcher::Supply.new;
+Lumberjack.dispatchers.append: $supply;
+
+# The application classes are PSGI applications in their own right
+my &ws-app  = Lumberjack::Application::WebSocket.new(supply => $supply.Supply);
+my &log-app = Lumberjack::Application::PSGI.new;
+my &ind-app = Lumberjack::Application::Index.new(ws-url => 'socket');
+
+# Use Crust::Builder to map the applications to locations on the server
+# you can of course any other mechanism that you choose.
+my &app = builder {
+	mount '/socket', &ws-app;
+   mount '/log', &log-app;
+   mount '/', &ind-app;
+};
+
+# Then pass &app to your P6SGI container.
+```
 
 ## Description
 
