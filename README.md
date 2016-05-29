@@ -104,7 +104,7 @@ fixes and suggestions at https://github.com/jonathanstowe/Lumberjack-Application
 
 ## License and Copyright
 
-This free software, please see the LICENSE file in the distribution
+This free software, please see the [LICENCE](LICENCE) file in the distribution
 directory.
 
 © Jonathan Stowe, 2016
