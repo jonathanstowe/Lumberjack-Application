@@ -102,7 +102,7 @@ probably fairly experimental, but it it works and I hope you find it
 useful in some way, that said I'll be interested in enhancements,
 fixes and suggestions at https://github.com/jonathanstowe/Lumberjack-Application/issues
 
-## License and Copyright
+## Licence and Copyright
 
 This free software, please see the [LICENCE](LICENCE) file in the distribution
 directory.
