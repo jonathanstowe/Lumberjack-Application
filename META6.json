@@ -1,5 +1,5 @@
 {
-   "license" : "perl",
+   "license" : "Artistic-2.0",
    "name" : "Lumberjack::Application",
    "version" : "0.0.4",
    "source-url" : "git@github.com:jonathanstowe/Lumberjack-Application.git",
