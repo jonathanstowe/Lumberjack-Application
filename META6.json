@@ -6,7 +6,7 @@
     "source": "git://github.com/jonathanstowe/Lumberjack-Application.git",
     "bugtracker": "https://github.com/jonathanstowe/Lumberjack-Application/issues"
   },
-  "perl": "6.c",
+  "perl": "6.*",
   "resources": [
     "templates/index.tt"
   ],
