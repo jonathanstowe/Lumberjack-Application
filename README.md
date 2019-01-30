@@ -109,5 +109,5 @@ fixes and suggestions at https://github.com/jonathanstowe/Lumberjack-Application
 This free software, please see the [LICENCE](LICENCE) file in the distribution
 directory.
 
-© Jonathan Stowe, 2016, 2017
+© Jonathan Stowe, 2016 - 2019
 

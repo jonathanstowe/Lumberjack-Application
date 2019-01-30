@@ -1,5 +1,9 @@
 {
   "name": "Lumberjack::Application",
+  "version": "0.0.7",
+  "auth": "github:jonathanstowe",
+  "api": "1.0",
+  "description": "A web facility for the Lumberjack logging framework",
   "source-url": "git://github.com/jonathanstowe/Lumberjack-Application.git",
   "support": {
     "email": "jns+gh@gellyfish.co.uk",
@@ -10,10 +14,7 @@
   "resources": [
     "templates/index.tt"
   ],
-  "build-depends": [
-    
-  ],
-  "auth": "github:jonathanstowe",
+  "build-depends": [ ],
   "depends": [
     "Lumberjack",
     "HTTP::UserAgent",
@@ -43,10 +44,8 @@
     "Lumberjack::Message::JSON": "lib/Lumberjack/Message/JSON.pm",
     "Lumberjack::Application::WebSocket": "lib/Lumberjack/Application/WebSocket.pm"
   },
-  "version": "0.0.6",
   "authors": [
     "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
   ],
-  "description": "A web facility for the Lumberjack logging framework",
   "meta-version": "0"
 }
