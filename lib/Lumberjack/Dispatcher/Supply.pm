@@ -55,7 +55,7 @@ class Lumberjack::Dispatcher::Supply does Lumberjack::Dispatcher {
     has Supplier $!supplier = Supplier.new;
     has Supply   $.Supply;
 
-    method Supply() returns Supply handles <tap> {
+    method Supply( --> Supply ) handles <tap> {
         if not $!Supply.defined {
             $!Supply = $!supplier.Supply;
         }

@@ -22,7 +22,7 @@ use Template6::Provider;
 
 class Lumberjack::Template::Provider does Template6::Provider {
 
-    method fetch ($name) {
+    method fetch($name --> Str) {
         my Str $template;
         if %.templates{$name}:exists {
             $template =  %.templates{$name};

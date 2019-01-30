@@ -94,7 +94,7 @@ class Lumberjack::Application does Callable {
         self.app.(%env)
     }
 
-    method app() returns Callable {
+    method app( --> Callable ) {
 
         if not &!app.defined {
             my $supply  = Lumberjack::Dispatcher::Supply.new;
