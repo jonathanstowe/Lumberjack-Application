@@ -1,3 +1,6 @@
+v0.0.8		Wed 18 Mar 10:42:09 GMT 2020
+	* Switch CI build to use docker
+	* Light Perl 6 → Raku renaming
 v0.0.7		Wed 30 Jan 21:16:32 GMT 2019
 	* Spring clean and upload to CPAN
 v0.0.6		Tue Jun 13 21:30:00 2017 +0100 

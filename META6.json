@@ -1,16 +1,17 @@
 {
   "name": "Lumberjack::Application",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "auth": "github:jonathanstowe",
   "api": "1.0",
   "description": "A web facility for the Lumberjack logging framework",
-  "source-url": "git://github.com/jonathanstowe/Lumberjack-Application.git",
+  "source-url": "https://github.com/jonathanstowe/Lumberjack-Application.git",
   "support": {
     "email": "jns+gh@gellyfish.co.uk",
-    "source": "git://github.com/jonathanstowe/Lumberjack-Application.git",
+    "source": "https://github.com/jonathanstowe/Lumberjack-Application.git",
     "bugtracker": "https://github.com/jonathanstowe/Lumberjack-Application/issues"
   },
   "perl": "6.*",
+  "raku": "6.*",
   "resources": [
     "templates/index.tt"
   ],
@@ -47,5 +48,5 @@
   "authors": [
     "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
   ],
-  "meta-version": "0"
+  "meta-version": "1"
 }

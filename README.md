@@ -84,8 +84,7 @@ the parts you need and do what you want with them.
 
 ## Installation
 
-Assuming you have a working installation of Rakudo Perl 6 with "zef"
-then you can simply do:
+Assuming you have a working installation of Rakudo with "zef" then you can simply do:
 
 	zef install Lumberjack::Application
 
@@ -102,12 +101,12 @@ may come along in the future.
 This is quite experimental and depends on things that are themselves
 probably fairly experimental, but it it works and I hope you find it
 useful in some way, that said I'll be interested in enhancements,
-fixes and suggestions at https://github.com/jonathanstowe/Lumberjack-Application/issues
+fixes and suggestions at [github](https://github.com/jonathanstowe/Lumberjack-Application/issues)
 
 ## Licence and Copyright
 
 This free software, please see the [LICENCE](LICENCE) file in the distribution
 directory.
 
-© Jonathan Stowe, 2016 - 2019
+© Jonathan Stowe, 2016 - 2020
 
