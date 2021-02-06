@@ -1,4 +1,4 @@
-#!perl6
+#!raku
 
 use v6;
 
@@ -29,4 +29,4 @@ ok $str.defined, "and we got something back";
 like $str, /'http://localhost/foo'/, "and it has our string";
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

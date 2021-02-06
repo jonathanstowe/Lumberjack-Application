@@ -41,4 +41,4 @@ class Lumberjack::Template::Provider does Template6::Provider {
     }
 }
 
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

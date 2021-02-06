@@ -1,15 +1,15 @@
-#!perl6
+#!raku
 
 use v6;
 
 use Test;
-use Test::Util::ServerPort; 
+use Test::Util::ServerPort;
 use Lumberjack;
 use Lumberjack::Dispatcher::Proxy;
 use Lumberjack::Message::JSON;
 use HTTP::Server::Tiny;
-         
-my $port = get-unused-port(); 
+
+my $port = get-unused-port();
 
 my @messages;
 
@@ -36,7 +36,7 @@ Foo.log-level = Lumberjack::All;
 
 my $d;
 
-lives-ok { $d = Lumberjack::Dispatcher::Proxy.new(url => "http://localhost:$port/") }, "create dispatcher";
+lives-ok { $d = Lumberjack::Dispatcher::Proxy.new(url => "http://127.0.0.1:$port/") }, "create dispatcher";
 
 Lumberjack.dispatchers.append: $d;
 
@@ -48,4 +48,4 @@ is @messages[0].message, "test message", "and it appears to be the right one";
 
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

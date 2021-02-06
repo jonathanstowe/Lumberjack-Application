@@ -2,7 +2,8 @@
 
 A web facility for the Lumberjack logging framework
 
-[![Build Status](https://travis-ci.org/jonathanstowe/Lumberjack-Application.svg?branch=master)](https://travis-ci.org/jonathanstowe/Lumberjack-Application)
+![Build Status](https://github.com/jonathanstowe/Lumberjack-Application/workflows/CI/badge.svg)
+
 
 ## Synopsis
 
@@ -14,7 +15,7 @@ A web facility for the Lumberjack logging framework
 ```
 Meanwhile in some other application:
 
-```perl6
+```raku
 
 	use Lumberjack;
 	use Lumberjack::Dispatcher::Proxy;
@@ -28,7 +29,7 @@ Meanwhile in some other application:
 
 ```
 Or you can arrange components as you see fit:
-```perl6
+```raku
 
 # This is almost  identical to what Lumberjack::Application does
 use Lumberjack;
@@ -108,5 +109,5 @@ fixes and suggestions at [github](https://github.com/jonathanstowe/Lumberjack-Ap
 This free software, please see the [LICENCE](LICENCE) file in the distribution
 directory.
 
-© Jonathan Stowe, 2016 - 2020
+© Jonathan Stowe, 2016 - 2021
 

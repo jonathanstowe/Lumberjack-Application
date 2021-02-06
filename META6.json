@@ -1,6 +1,6 @@
 {
   "name": "Lumberjack::Application",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "auth": "github:jonathanstowe",
   "api": "1.0",
   "description": "A web facility for the Lumberjack logging framework",
@@ -18,6 +18,7 @@
   "build-depends": [ ],
   "depends": [
     "Lumberjack",
+    "Lumberjack::Message::JSON",
     "HTTP::UserAgent",
     "HTTP::Server::Tiny",
     "Crust",
@@ -42,7 +43,6 @@
     "Lumberjack::Template::Provider": "lib/Lumberjack/Template/Provider.pm",
     "Lumberjack::Application": "lib/Lumberjack/Application.pm",
     "Lumberjack::Application::Index": "lib/Lumberjack/Application/Index.pm",
-    "Lumberjack::Message::JSON": "lib/Lumberjack/Message/JSON.pm",
     "Lumberjack::Application::WebSocket": "lib/Lumberjack/Application/WebSocket.pm"
   },
   "authors": [

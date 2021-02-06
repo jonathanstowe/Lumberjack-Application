@@ -1,4 +1,4 @@
-#!perl6
+#!raku
 
 use v6;
 
@@ -30,4 +30,4 @@ isa-ok @messages[0], Lumberjack::Message, "and it's a message";
 
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

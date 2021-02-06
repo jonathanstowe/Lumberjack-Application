@@ -65,4 +65,4 @@ class Lumberjack::Dispatcher::Supply does Lumberjack::Dispatcher {
         $!supplier.emit($message);
     }
 }
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku
