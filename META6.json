@@ -17,8 +17,8 @@
   ],
   "build-depends": [ ],
   "depends": [
-    "Lumberjack",
-    "Lumberjack::Message::JSON",
+    "Lumberjack:ver<0.1.2+>",
+    "Lumberjack::Message::JSON:ver<0.0.3+>",
     "HTTP::UserAgent",
     "HTTP::Server::Tiny",
     "Crust",
