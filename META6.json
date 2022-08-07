@@ -1,21 +1,7 @@
 {
-  "name": "Lumberjack::Application",
-  "version": "0.0.9",
-  "auth": "github:jonathanstowe",
-  "api": "1.0",
-  "description": "A web facility for the Lumberjack logging framework",
-  "source-url": "https://github.com/jonathanstowe/Lumberjack-Application.git",
-  "support": {
-    "email": "jns+gh@gellyfish.co.uk",
-    "source": "https://github.com/jonathanstowe/Lumberjack-Application.git",
-    "bugtracker": "https://github.com/jonathanstowe/Lumberjack-Application/issues"
-  },
-  "perl": "6.*",
-  "raku": "6.*",
-  "resources": [
-    "templates/index.tt"
+  "authors": [
+    "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
   ],
-  "build-depends": [ ],
   "depends": [
     "Lumberjack:ver<0.1.2+>",
     "Lumberjack::Message::JSON:ver<0.0.3+>",
@@ -26,27 +12,41 @@
     "JSON::Class",
     "Template6"
   ],
+  "test-depends": [
+    "Test::Util::ServerPort"
+  ],
+  "description": "A web facility for the Lumberjack logging framework",
+  "auth": "zef:jonathanstowe",
+  "build-depends": [
+  ],
+  "resources": [
+    "templates/index.tt"
+  ],
+  "raku": "6.*",
+  "license": "Artistic-2.0",
+  "api": "1.0",
+  "name": "Lumberjack::Application",
+  "meta-version": "1",
   "tags": [
     "logging",
     "lumberjack",
     "websocket",
     "p6sgi"
   ],
-  "license": "Artistic-2.0",
-  "test-depends": [
-    "Test::Util::ServerPort"
-  ],
+  "source-url": "https://github.com/jonathanstowe/Lumberjack-Application.git",
   "provides": {
+    "Lumberjack::Application::PSGI": "lib/Lumberjack/Application/PSGI.pm",
     "Lumberjack::Dispatcher::Proxy": "lib/Lumberjack/Dispatcher/Proxy.pm",
     "Lumberjack::Dispatcher::Supply": "lib/Lumberjack/Dispatcher/Supply.pm",
-    "Lumberjack::Application::PSGI": "lib/Lumberjack/Application/PSGI.pm",
     "Lumberjack::Template::Provider": "lib/Lumberjack/Template/Provider.pm",
-    "Lumberjack::Application": "lib/Lumberjack/Application.pm",
     "Lumberjack::Application::Index": "lib/Lumberjack/Application/Index.pm",
+    "Lumberjack::Application": "lib/Lumberjack/Application.pm",
     "Lumberjack::Application::WebSocket": "lib/Lumberjack/Application/WebSocket.pm"
   },
-  "authors": [
-    "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
-  ],
-  "meta-version": "1"
+  "support": {
+    "email": "jns+gh@gellyfish.co.uk",
+    "bugtracker": "https://github.com/jonathanstowe/Lumberjack-Application/issues",
+    "source": "https://github.com/jonathanstowe/Lumberjack-Application.git"
+  },
+  "version": "0.0.10"
 }

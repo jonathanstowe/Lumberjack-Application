@@ -1,3 +1,5 @@
+v0.0.10	Sun  7 Aug 09:48:16 BST 2022
+	* Upload to zef repository
 v0.0.9		Sat  6 Feb 14:30:01 GMT 2021
 	* Liberate Lumberjack::Message::JSON
 v0.0.8		Wed 18 Mar 10:42:09 GMT 2020
@@ -17,3 +19,4 @@ v0.0.2		Sun May 29 08:46:00 2016 +0100
 	* Remove version from use Lumberjack
 v0.0.1		Tue Apr 12 00:36:39 2016 +0100 
 	* INitial release
+
