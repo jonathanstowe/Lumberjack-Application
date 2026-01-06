@@ -23,6 +23,12 @@ jobs:
     - name: Raku version
       run: raku -v
 
+    - name: Install an SSL
+      run: apt-get -qq update && apt-get -qq install -y libssl3 libssl-dev openssl
+
+    - name: Install UUID::V4
+      run: zef install UUID::V4
+
     - name: Install dependencies
       run: zef install --deps-only --/test --test-depends .
 

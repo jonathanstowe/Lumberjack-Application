@@ -4,7 +4,7 @@
   ],
   "depends": [
     "Lumberjack:ver<0.1.2+>",
-    "Lumberjack::Message::JSON:ver<0.0.3+>",
+    "Lumberjack::Message::JSON:ver<0.1.11+>",
     "HTTP::UserAgent",
     "HTTP::Server::Tiny",
     "Crust",
@@ -35,18 +35,18 @@
   ],
   "source-url": "https://github.com/jonathanstowe/Lumberjack-Application.git",
   "provides": {
-    "Lumberjack::Application::PSGI": "lib/Lumberjack/Application/PSGI.pm",
-    "Lumberjack::Dispatcher::Proxy": "lib/Lumberjack/Dispatcher/Proxy.pm",
-    "Lumberjack::Dispatcher::Supply": "lib/Lumberjack/Dispatcher/Supply.pm",
-    "Lumberjack::Template::Provider": "lib/Lumberjack/Template/Provider.pm",
-    "Lumberjack::Application::Index": "lib/Lumberjack/Application/Index.pm",
-    "Lumberjack::Application": "lib/Lumberjack/Application.pm",
-    "Lumberjack::Application::WebSocket": "lib/Lumberjack/Application/WebSocket.pm"
+    "Lumberjack::Application::PSGI": "lib/Lumberjack/Application/PSGI.rakumod",
+    "Lumberjack::Dispatcher::Proxy": "lib/Lumberjack/Dispatcher/Proxy.rakumod",
+    "Lumberjack::Dispatcher::Supply": "lib/Lumberjack/Dispatcher/Supply.rakumod",
+    "Lumberjack::Template::Provider": "lib/Lumberjack/Template/Provider.rakumod",
+    "Lumberjack::Application::Index": "lib/Lumberjack/Application/Index.rakumod",
+    "Lumberjack::Application": "lib/Lumberjack/Application.rakumod",
+    "Lumberjack::Application::WebSocket": "lib/Lumberjack/Application/WebSocket.rakumod"
   },
   "support": {
     "email": "jns+gh@gellyfish.co.uk",
     "bugtracker": "https://github.com/jonathanstowe/Lumberjack-Application/issues",
     "source": "https://github.com/jonathanstowe/Lumberjack-Application.git"
   },
-  "version": "0.0.10"
+  "version": "0.0.11"
 }

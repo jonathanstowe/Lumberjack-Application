@@ -47,7 +47,7 @@ other mechanisms may become available in the future.
 
 use Lumberjack;
 
-use Lumberjack::Message::JSON;
+use Lumberjack::Message::JSON:ver<0.1.11+>;
 
 use HTTP::UserAgent;
 

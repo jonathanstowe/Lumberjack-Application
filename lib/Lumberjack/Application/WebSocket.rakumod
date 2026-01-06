@@ -49,12 +49,12 @@ it is called at.
 The class only has a constructor, with one required parameter
 C<supply> which must be a Supply which will provide the
 Lumberjack::Messages that will be sent out by the websocket
-connect.  Typically this will be the C<Supply> of a 
+connect.  Typically this will be the C<Supply> of a
 C<Lumberjack::Dispatcher::Supply>.
 
 =end pod
 
-use Lumberjack::Message::JSON;
+use Lumberjack::Message::JSON:ver<0.1.11+>;
 use WebSocket::P6W;
 
 

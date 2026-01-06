@@ -90,7 +90,7 @@
               "type": "directory",
               "children": [
                 {
-                  "name": "Provider.pm",
+                  "name": "Provider.rakumod",
                   "type": "file"
                 }
               ],
@@ -102,11 +102,11 @@
               "children": [
                 {
                   "type": "file",
-                  "name": "Proxy.pm"
+                  "name": "Proxy.rakumod"
                 },
                 {
                   "type": "file",
-                  "name": "Supply.pm"
+                  "name": "Supply.rakumod"
                 }
               ],
               "name": "Dispatcher",
@@ -114,22 +114,22 @@
             },
             {
               "type": "file",
-              "name": "Application.pm"
+              "name": "Application.rakumod"
             },
             {
               "purpose": null,
               "children": [
                 {
                   "type": "file",
-                  "name": "Index.pm"
+                  "name": "Index.rakumod"
                 },
                 {
-                  "name": "WebSocket.pm",
+                  "name": "WebSocket.rakumod",
                   "type": "file"
                 },
                 {
                   "type": "file",
-                  "name": "PSGI.pm"
+                  "name": "PSGI.rakumod"
                 }
               ],
               "name": "Application",
