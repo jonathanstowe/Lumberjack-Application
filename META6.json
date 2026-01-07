@@ -8,9 +8,10 @@
     "HTTP::UserAgent",
     "HTTP::Server::Tiny",
     "Crust",
-    "WebSocket",
+    "Digest::SHA",
+    "WebSocket::P6W",
     "JSON::Class",
-    "Template6"
+    "Template6:ver<0.10.0>:api<0>"
   ],
   "test-depends": [
     "Test::Util::ServerPort"

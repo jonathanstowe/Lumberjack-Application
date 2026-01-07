@@ -3,7 +3,7 @@
 use v6;
 
 use Test;
-use Template6;
+use Template6:ver<0.10.0>;
 use Lumberjack::Template::Provider;
 
 # This exercises the template provider in much the same way

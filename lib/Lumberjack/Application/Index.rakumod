@@ -42,7 +42,7 @@ path on which the websocket endpoint is located.
 
 =end pod
 
-use Template6;
+use Template6:ver<0.10.0>;
 use Lumberjack::Template::Provider;
 
 class Lumberjack::Application::Index does Callable {

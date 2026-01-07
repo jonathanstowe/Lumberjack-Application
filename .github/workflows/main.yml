@@ -26,8 +26,12 @@ jobs:
     - name: Install an SSL
       run: apt-get -qq update && apt-get -qq install -y libssl3 libssl-dev openssl
 
-    - name: Install UUID::V4
-      run: zef install UUID::V4
+    # This is temporary. For the time being we need an older version of Template6
+    # than installed in rakudo-star and for some reason using the explicit version
+    # doesn't work as expected
+    
+    - name: Remove Template6
+      run: zef uninstall Template6
 
     - name: Install dependencies
       run: zef install --deps-only --/test --test-depends .

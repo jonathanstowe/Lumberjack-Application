@@ -18,7 +18,7 @@ that little problem.
 
 =end pod
 
-use Template6::Provider;
+use Template6::Provider:ver<0.10.0>;
 
 class Lumberjack::Template::Provider does Template6::Provider {
 
