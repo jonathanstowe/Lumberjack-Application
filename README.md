@@ -109,5 +109,4 @@ fixes and suggestions at [github](https://github.com/jonathanstowe/Lumberjack-Ap
 This free software, please see the [LICENCE](LICENCE) file in the distribution
 directory.
 
-© Jonathan Stowe, 2016 - 2021
-
+© Jonathan Stowe, 2016 - 2026
